@@ -23,11 +23,16 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { CheckBox_5: true }
 
   render = () => (
     <View>
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_5}
+        onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
+      />
     </View>
   )
 }
@@ -37,6 +42,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
-  Button_3: {}
+  Button_3: {},
+  View_1: {},
+  Button_3: {},
+  CheckBox_5: {}
 })
